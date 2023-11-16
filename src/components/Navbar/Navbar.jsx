@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
@@ -9,6 +9,18 @@ import { AiOutlineHome, AiOutlineContacts } from "react-icons/ai";
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const fontSize = windowWidth > 768 ? "2rem" : "1.5rem"; // Adjust the breakpoint as needed
 
   function scrollHandler() {
     if (window.scrollY >= 20) {
@@ -33,9 +45,11 @@ function NavBar() {
             src={logo}
             className="img-fluid logo"
             alt="brand"
-            style={{ width: "15%", marginRight: "5px" }} // 15% bigger
+            style={{ width: "15%", marginRight: "5px" }}
           />
-          <h1 style={{margin: 0, fontFamily: 'Playfair Display' }} className="heading-name">BATRA ASSOCIATES </h1>
+          {windowWidth > 768 && (
+            <h1 style={{ margin: "5px 0", fontFamily: 'Playfair Display', fontSize }} className="heading-name">BATRA ASSOCIATES</h1>
+          )}
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
