@@ -40,14 +40,14 @@ const About = () => {
             </Row>
             <Row>
               <Col md={12} className="home-about-social">
-                <h1>FIND ME ON</h1>
+                <h1>FIND US ON</h1>
                 <p>
-                Please don't hesitate to reach out to me and <span className="yellow">connect.</span>
+                Please don't hesitate to reach out and <span className="yellow">connect.</span>
                 </p>
                 <ul className="home-about-social-links">
                   <li className="social-icons">
                     <a
-                      href="https://github.com/19sajib"
+                      href="https://github.com/hrithikbatra6"
                       target="_blank"
                       rel="noreferrer"
                       className="icon-colour  home-social-icons"
@@ -58,7 +58,7 @@ const About = () => {
                   </li>
                   <li className="social-icons">
                     <a
-                      href="https://twitter.com/19sajib"
+                      href="https://twitter.com/hritikbatra6"
                       target="_blank"
                       rel="noreferrer"
                       className="icon-colour  home-social-icons"
@@ -69,7 +69,7 @@ const About = () => {
                   </li>
                   <li className="social-icons">
                     <a
-                      href="https://www.linkedin.com/in/19sajib/"
+                      href="https://www.linkedin.com/in/hritikbatra/"
                       target="_blank"
                       rel="noreferrer"
                       className="icon-colour  home-social-icons"
@@ -80,7 +80,7 @@ const About = () => {
                   </li>
                   <li className="social-icons">
                     <a
-                      href="https://www.instagram.com/19sajib"
+                      href="https://www.instagram.com/beingreishierish/"
                       target="_blank"
                       rel="noreferrer"
                       className="icon-colour home-social-icons"
